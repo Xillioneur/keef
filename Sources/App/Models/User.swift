@@ -9,6 +9,7 @@ final class User: SQLiteModel {
         self.username = username
     }
 }
+
 extension User: Content {}
 extension User: Migration {}
 extension User: Parameter {}

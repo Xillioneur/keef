@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CRUD</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+            </head>
+    <body class="container">
+        <h1 class="text-center"> Create Users </h1>
+        <div class="row">
+            <div class="col-xs-12 col-sm-3">
+                <h2>Create</h2>
+                <form method="POST" action="/users">
+                <div class="input-group">
+                    <input type="text" name="username" class="form-control">
+                    <span class="input-group-btn">
+                        <input class="btn btn-success" type="submit" value="create" />
+                    </span>
+                </div>
+                </form>
+            </div>
+
+            <div class="col-xs-12 col-sm-3">
+                <h2>Read</h2>
+                #for(user in userlist) {
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <form action="/users/#(user.id)/show">
+                                <div class="form-group">
+                                    <input type="text" name="username" class="form-control" value="#(user.username)" disabled>
+                                    <input type="submit" value="edit">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </body>
+</html>
