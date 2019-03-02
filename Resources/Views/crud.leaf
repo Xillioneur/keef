@@ -34,6 +34,16 @@
 
             <div class="col-xs-12 col-sm-3">
                 <h2>Update</h2>
+                #for(user in userlist) {
+                    <form method="POST" action="/users/#(user.id)/update">
+                        <div class="input-group from-group">
+                            <input type="text" name="username" class="form-control" value="#(user.username)" />
+                            <span class="input-group-btn">
+                                <input class="btn btn-primary" type="submit" value="update" />
+                            </span>
+                        </div>
+                    </form> 
+                }
             </div>
 
             <div class="col-xs-12 col-sm-3">

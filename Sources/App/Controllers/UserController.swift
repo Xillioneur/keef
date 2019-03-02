@@ -30,7 +30,15 @@ final class UserController {
       }
     }
   }
-}
+
+  func delete(_ req: Request) throws -> Future<Response> {
+    return try req.parameters.next(User.self).flatMap { user in
+      return user.delete(on: req).map { _ in
+        return req.redirect(to: "/users")
+      }
+    }
+  }
+} 
 
 // Form used to decode user for update
 struct UserForm: Content {
