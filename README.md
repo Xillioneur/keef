@@ -7,4 +7,5 @@
 </p>
 
 ## Community 🚀
+
 Join the awesome and welcoming Vapor community in <a href="http://vapor.team/"><b>Discord!</b></a>
