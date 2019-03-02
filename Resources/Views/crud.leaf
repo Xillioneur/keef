@@ -47,7 +47,17 @@
             </div>
 
             <div class="col-xs-12 col-sm-3">
-                <h2>Create</h2>
+                <h2>Delete</h2>
+                #for(user in userlist) {
+                    <form method="POST" action="users/#(user.id)/delete">
+                        <div class="form-group input-gorup">
+                            <input type="text" name="username" class="form-control" value="#(user.username)" disabled>
+                            <span class="input-group-btn">
+                                <input class="btn btn-danger" type="submit" value="delete" />
+                            </span>
+                        </div>
+                    </form>
+                }
             </div>
 
         </div>
